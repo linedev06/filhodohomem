@@ -1,0 +1,702 @@
+<html class="scroll-smooth" lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Reflexão - Amar o Próximo
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;family=Merriweather:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
+      scroll-behavior: smooth;
+    }
+    h1, h2, h3 {
+      font-family: 'Merriweather', serif;
+    }
+    /* Scrollbar for comments */
+    #comments {
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    #comments::-webkit-scrollbar {
+      width: 8px;
+    }
+    #comments::-webkit-scrollbar-thumb {
+      background-color: #a78bfa;
+      border-radius: 4px;
+    }
+    /* Scrollbar for bookmarks */
+    #bookmarksList {
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    #bookmarksList::-webkit-scrollbar {
+      width: 6px;
+    }
+    #bookmarksList::-webkit-scrollbar-thumb {
+      background-color: #818cf8;
+      border-radius: 3px;
+    }
+    mark.highlight {
+      background-color: #fde68a;
+      padding: 0 0.15em;
+      border-radius: 0.15rem;
+    }
+    /* Tooltip styling */
+    .tooltip {
+      position: relative;
+      cursor: pointer;
+    }
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: max-content;
+      max-width: 220px;
+      background-color: #4f46e5;
+      color: #fff;
+      text-align: center;
+      border-radius: 0.375rem;
+      padding: 0.5rem;
+      position: absolute;
+      z-index: 1000;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      pointer-events: none;
+    }
+    .tooltip:hover .tooltiptext,
+    .tooltip:focus-within .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+ </head>
+ <body class="min-h-screen flex flex-col items-center px-4 py-10 sm:px-6 md:px-12 lg:px-24 bg-gray-50">
+  <article class="max-w-3xl w-full bg-white shadow-xl rounded-lg p-10 sm:p-14 border border-gray-200 relative" id="mainArticle" tabindex="0" aria-label="Artigo de reflexão Amar o Próximo Como a Ti Mesmo">
+   <header class="mb-12 text-center">
+    <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-indigo-600 text-white mb-6 shadow-lg" aria-hidden="true">
+     <i class="fas fa-heart fa-2x"></i>
+    </div>
+    <h1 class="text-4xl font-extrabold text-gray-900 leading-tight tracking-tight">
+     Amar o Próximo Como a Ti Mesmo
+    </h1>
+   </header>
+   <section class="space-y-8 text-lg leading-relaxed text-gray-700" id="contentSection">
+    <p class="flex items-start space-x-3 tooltip" data-paragraph-id="1" tabindex="0" aria-describedby="tooltip-1">
+     <i class="fas fa-globe-americas text-indigo-600 mt-1" aria-hidden="true"></i>
+     <span>O mundo nos ensina a sermos grandes. A buscarmos ser mais, ter mais, vencer mais. Mas foi um homem humilhado que nos ensinou o que realmente importa.</span>
+     <span role="tooltip" id="tooltip-1" class="tooltiptext">Reflexão sobre humildade e verdadeira grandeza.</span>
+    </p>
+    <p class="flex items-start space-x-3 tooltip" data-paragraph-id="2" tabindex="0" aria-describedby="tooltip-2">
+     <i class="fas fa-hands-helping text-indigo-600 mt-1" aria-hidden="true"></i>
+     <span>Ele lavou os pés daqueles que o chamavam de Mestre. Tocou os que ninguém ousava tocar. Amou os que ninguém amava. E olhou para nós — para mim, para você — e disse: “Ame o próximo como a ti mesmo.”</span>
+     <span role="tooltip" id="tooltip-2" class="tooltiptext">Exemplo de serviço e amor ao próximo.</span>
+    </p>
+    <p class="flex items-start space-x-3 font-semibold text-indigo-700 tooltip" data-paragraph-id="3" tabindex="0" aria-describedby="tooltip-3">
+     <i class="fas fa-question-circle mt-1" aria-hidden="true"></i>
+     <span>Mas quem realmente faz isso?</span>
+     <span role="tooltip" id="tooltip-3" class="tooltiptext">Desafio para a prática do amor verdadeiro.</span>
+    </p>
+    <p class="flex items-start space-x-3 tooltip" data-paragraph-id="4" tabindex="0" aria-describedby="tooltip-4">
+     <i class="fas fa-hand-holding-heart text-indigo-600 mt-1" aria-hidden="true"></i>
+     <span>Amar o outro como a si mesmo não é sentir pena. Não é jogar migalhas, um olhar de relance, um favor que não nos custa nada. Amar o outro como a si mesmo é sentir a fome do outro como sua própria fome. É chorar a dor do outro como se fosse sua. É dar sem esperar, servir sem querer ser servido, perdoar quando ninguém mais perdoaria.</span>
+     <span role="tooltip" id="tooltip-4" class="tooltiptext">Definição profunda do amor verdadeiro.</span>
+    </p>
+    <p class="flex items-start space-x-3 tooltip" data-paragraph-id="5" tabindex="0" aria-describedby="tooltip-5">
+     <i class="fas fa-cross text-indigo-600 mt-1" aria-hidden="true"></i>
+     <span>E isso… isso nos mata. Porque somos orgulhosos. Porque queremos ser servidos, reconhecidos, aplaudidos. Mas Ele, o Rei que tinha tudo, despiu-se de tudo. Morreu nu, ferido, cuspido, não por Ele, mas por nós. Ele que não devia nada pagou tudo.</span>
+     <span role="tooltip" id="tooltip-5" class="tooltiptext">Sacrifício e humildade do Mestre.</span>
+    </p>
+    <p class="flex items-start space-x-3 tooltip" data-paragraph-id="6" tabindex="0" aria-describedby="tooltip-6">
+     <i class="fas fa-user-friends text-indigo-600 mt-1" aria-hidden="true"></i>
+     <span>E eu? E você? Ainda brigamos por razão. Ainda queremos ter o último argumento. Ainda viramos o rosto para não ver a dor que nos pede ajuda. Ainda nos achamos bons, enquanto ignoramos o amor que Ele nos ordenou.</span>
+     <span role="tooltip" id="tooltip-6" class="tooltiptext">Reflexão sobre ego e empatia.</span>
+    </p>
+    <p class="flex items-start space-x-3 font-semibold text-indigo-700 tooltip" data-paragraph-id="7" tabindex="0" aria-describedby="tooltip-7">
+     <i class="fas fa-balance-scale text-indigo-600 mt-1" aria-hidden="true"></i>
+     <span>Amar o próximo como a ti mesmo. Que fardo impossível. Que chamado glorioso.</span>
+     <span role="tooltip" id="tooltip-7" class="tooltiptext">Reconhecimento do desafio e da glória do amor.</span>
+    </p>
+    <p class="flex items-start space-x-3 tooltip" data-paragraph-id="8" tabindex="0" aria-describedby="tooltip-8">
+     <i class="fas fa-check-circle text-indigo-600 mt-1" aria-hidden="true"></i>
+     <span>Mas se Ele nos pediu, então é possível.</span>
+     <span role="tooltip" id="tooltip-8" class="tooltiptext">Esperança e possibilidade.</span>
+    </p>
+    <p class="flex items-start space-x-3 tooltip" data-paragraph-id="9" tabindex="0" aria-describedby="tooltip-9">
+     <i class="fas fa-lightbulb text-indigo-600 mt-1" aria-hidden="true"></i>
+     <span>E se é possível, então eu preciso tentar.</span>
+     <span role="tooltip" id="tooltip-9" class="tooltiptext">Convite à ação.</span>
+    </p>
+    <p class="flex items-start space-x-3 tooltip" data-paragraph-id="10" tabindex="0" aria-describedby="tooltip-10">
+     <i class="fas fa-road text-indigo-600 mt-1" aria-hidden="true"></i>
+     <span>Ele é o caminho, a verdade, e a vida. Ninguém vai ao pai senão por ele.</span>
+     <span role="tooltip" id="tooltip-10" class="tooltiptext">Afirmação da fé.</span>
+    </p>
+    <p class="flex items-start space-x-3 tooltip" data-paragraph-id="11" tabindex="0" aria-describedby="tooltip-11">
+     <i class="fas fa-question text-indigo-600 mt-1" aria-hidden="true"></i>
+     <span>Certa vez surgiu uma certa dúvida: “Por que pessoas boas sofrem, enquanto os maus prosperam?”</span>
+     <span role="tooltip" id="tooltip-11" class="tooltiptext">Pergunta existencial.</span>
+    </p>
+    <p class="flex items-start space-x-3 tooltip" data-paragraph-id="12" tabindex="0" aria-describedby="tooltip-12">
+     <i class="fas fa-users text-indigo-600 mt-1" aria-hidden="true"></i>
+     <span>Se querem ser verdadeiramente grandes, contentem-se com o pequeno, pois grande não é aquele que é maior que teu irmão, mas o que não precisa se engrandecer perante teus pequeninos irmãos.</span>
+     <span role="tooltip" id="tooltip-12" class="tooltiptext">Humildade como verdadeira grandeza.</span>
+    </p>
+    <p class="flex items-start space-x-3 tooltip" data-paragraph-id="13" tabindex="0" aria-describedby="tooltip-13">
+     <i class="fas fa-praying-hands text-indigo-600 mt-1" aria-hidden="true"></i>
+     <span>Sendo porém humilde de coração, e menor que teus pequenos irmãos, verdadeiramente serão filhos de Deus, dedique-se ao outro, ajude, ame, sirva de coração, e tudo que é seu e lhe foi tirado, será devolvido.</span>
+     <span role="tooltip" id="tooltip-13" class="tooltiptext">Chamado à humildade e serviço.</span>
+    </p>
+    <p class="flex items-start space-x-3 tooltip" data-paragraph-id="14" tabindex="0" aria-describedby="tooltip-14">
+     <i class="fas fa-seedling text-indigo-600 mt-1" aria-hidden="true"></i>
+     <span>Sirva com teu coração, para que tenha vida, e a tenha em abundância.</span>
+     <span role="tooltip" id="tooltip-14" class="tooltiptext">Promessa de vida abundante.</span>
+    </p>
+   </section>
+   <footer class="mt-12 text-center text-gray-500 italic text-sm border-t border-gray-200 pt-6" tabindex="0" aria-label="Citação do Salmo 73:3-17">
+    Salmo 73:3-17 - "Pois eu tinha inveja dos arrogantes, ao ver a prosperidade dos ímpios. [...] Até que entrei no santuário de Deus, e então compreendi o destino dos ímpios."
+   </footer>
+
+   <!-- Bookmark button fixed top right -->
+   <button aria-label="Abrir painel de marcadores" id="bookmarkToggle" title="Marcadores" class="fixed top-6 right-6 z-50 bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" type="button">
+    <i class="fas fa-bookmark fa-lg"></i>
+   </button>
+
+   <!-- Bookmark panel -->
+   <aside id="bookmarkPanel" class="fixed top-20 right-6 z-40 w-80 max-w-full bg-white border border-gray-300 rounded-lg shadow-lg p-6 hidden flex-col" role="region" aria-label="Painel de marcadores">
+    <div class="flex justify-between items-center mb-4">
+     <h3 class="text-xl font-semibold text-indigo-700">Marcadores</h3>
+     <button aria-label="Fechar painel de marcadores" id="bookmarkClose" class="text-gray-500 hover:text-indigo-600 focus:outline-none" type="button">
+      <i class="fas fa-times fa-lg"></i>
+     </button>
+    </div>
+    <ul id="bookmarksList" class="divide-y divide-gray-200 overflow-y-auto" tabindex="0" aria-live="polite" aria-relevant="additions removals">
+     <!-- Bookmarks inserted here -->
+    </ul>
+    <p id="noBookmarks" class="text-gray-400 italic text-center mt-4">Nenhum marcador adicionado.</p>
+   </aside>
+  </article>
+
+  <!-- Additional Functionalities Section -->
+  <section class="max-w-3xl w-full mt-16 bg-white shadow-xl rounded-lg p-10 sm:p-14 border border-gray-200" aria-label="Seção de participação e compartilhamento">
+   <h2 class="text-3xl font-extrabold text-gray-900 mb-8 text-center tracking-tight">
+    Participe e Compartilhe
+   </h2>
+
+   <!-- Share Buttons -->
+   <div class="flex justify-center space-x-6 mb-10 flex-wrap" role="group" aria-label="Botões de compartilhamento">
+    <button aria-label="Compartilhar no Facebook" class="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow transition" type="button">
+     <i class="fab fa-facebook-f" aria-hidden="true"></i>
+     <span>Facebook</span>
+    </button>
+    <button aria-label="Compartilhar no Twitter" class="flex items-center space-x-2 bg-sky-400 hover:bg-sky-500 text-white font-semibold py-2 px-4 rounded shadow transition" type="button">
+     <i class="fab fa-twitter" aria-hidden="true"></i>
+     <span>Twitter</span>
+    </button>
+    <button aria-label="Compartilhar no WhatsApp" class="flex items-center space-x-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded shadow transition" type="button">
+     <i class="fab fa-whatsapp" aria-hidden="true"></i>
+     <span>WhatsApp</span>
+    </button>
+    <button aria-label="Copiar link para área de transferência" class="flex items-center space-x-2 bg-gray-700 hover:bg-gray-800 text-white font-semibold py-2 px-4 rounded shadow transition" type="button" id="copyLinkBtn">
+     <i class="fas fa-link" aria-hidden="true"></i>
+     <span>Copiar Link</span>
+    </button>
+   </div>
+
+   <!-- Newsletter Subscription -->
+   <form id="newsletterForm" class="max-w-xl mx-auto mb-12" novalidate aria-label="Formulário de inscrição na newsletter">
+    <label class="block text-gray-700 font-semibold mb-3" for="emailInput">
+     Inscreva-se para receber reflexões e novidades
+    </label>
+    <div class="flex flex-col sm:flex-row gap-4">
+     <input aria-label="Digite seu email para inscrição" class="flex-grow border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" id="emailInput" name="email" placeholder="Seu email" required="" type="email"/>
+     <button aria-label="Enviar inscrição" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-md px-6 py-3 transition" type="submit">
+      Inscrever-se
+     </button>
+    </div>
+    <p class="mt-2 text-sm text-red-600 hidden" id="emailError" role="alert">Por favor, insira um email válido.</p>
+    <p class="mt-2 text-sm text-green-600 hidden" id="emailSuccess" role="alert">Obrigado por se inscrever!</p>
+   </form>
+
+   <!-- Comments Section -->
+   <div aria-label="Seção de comentários">
+    <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">
+     Comentários
+    </h3>
+    <div id="comments" class="space-y-6 max-h-72 overflow-y-auto border border-gray-200 rounded-md p-4 bg-gray-50" tabindex="0" aria-label="Lista de comentários" aria-live="polite" aria-relevant="additions">
+     <!-- Comments will appear here -->
+    </div>
+    <form id="commentForm" class="mt-6 max-w-xl mx-auto" novalidate aria-label="Formulário para adicionar comentário">
+     <label class="block text-gray-700 font-semibold mb-2" for="nameInput">
+      Nome
+     </label>
+     <input aria-label="Digite seu nome" class="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" id="nameInput" name="name" placeholder="Seu nome" required="" type="text"/>
+     <label class="block text-gray-700 font-semibold mb-2" for="commentInput">
+      Comentário
+     </label>
+     <textarea aria-label="Digite seu comentário" class="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 resize-y" id="commentInput" name="comment" placeholder="Escreva seu comentário aqui..." required="" rows="4"></textarea>
+     <div class="flex justify-between items-center">
+      <button aria-label="Enviar comentário" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-md px-6 py-3 transition" type="submit">
+       Enviar
+      </button>
+      <button aria-label="Limpar comentários" class="text-sm text-red-600 hover:text-red-800 underline focus:outline-none" id="clearCommentsBtn" type="button">
+       Limpar Comentários
+      </button>
+     </div>
+     <p class="mt-2 text-sm text-red-600 hidden" id="commentError" role="alert">Por favor, preencha todos os campos.</p>
+    </form>
+   </div>
+  </section>
+
+  <!-- Scroll to top button -->
+  <button aria-label="Voltar ao topo" id="scrollTopBtn" title="Voltar ao topo" class="fixed bottom-6 right-6 z-50 bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-full shadow-lg hidden focus:outline-none focus:ring-2 focus:ring-indigo-400" type="button">
+   <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script>
+   // Share buttons functionality
+   const shareText = encodeURIComponent("Reflexão: Amar o Próximo Como a Ti Mesmo");
+   const shareUrl = encodeURIComponent(window.location.href);
+
+   document.querySelectorAll('button[aria-label^="Compartilhar"]').forEach(button => {
+     button.addEventListener('click', () => {
+       let url = '';
+       if(button.ariaLabel.includes('Facebook')) {
+         url = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
+       } else if(button.ariaLabel.includes('Twitter')) {
+         url = `https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`;
+       } else if(button.ariaLabel.includes('WhatsApp')) {
+         url = `https://api.whatsapp.com/send?text=${shareText}%20${shareUrl}`;
+       }
+       window.open(url, '_blank', 'noopener,noreferrer,width=600,height=400');
+     });
+   });
+
+   // Copy link button
+   const copyLinkBtn = document.getElementById('copyLinkBtn');
+   copyLinkBtn.addEventListener('click', () => {
+     navigator.clipboard.writeText(window.location.href).then(() => {
+       copyLinkBtn.innerHTML = '<i class="fas fa-check" aria-hidden="true"></i><span> Copiado!</span>';
+       setTimeout(() => {
+         copyLinkBtn.innerHTML = '<i class="fas fa-link" aria-hidden="true"></i><span> Copiar Link</span>';
+       }, 2500);
+     }).catch(() => {
+       alert('Não foi possível copiar o link. Por favor, copie manualmente.');
+     });
+   });
+
+   // Newsletter form validation and submission simulation
+   const newsletterForm = document.getElementById('newsletterForm');
+   const emailInput = document.getElementById('emailInput');
+   const emailError = document.getElementById('emailError');
+   const emailSuccess = document.getElementById('emailSuccess');
+
+   newsletterForm.addEventListener('submit', e => {
+     e.preventDefault();
+     const emailValue = emailInput.value.trim();
+     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+     if (!emailRegex.test(emailValue)) {
+       emailError.classList.remove('hidden');
+       emailSuccess.classList.add('hidden');
+       emailInput.focus();
+     } else {
+       emailError.classList.add('hidden');
+       emailSuccess.classList.remove('hidden');
+       newsletterForm.reset();
+       setTimeout(() => {
+         emailSuccess.classList.add('hidden');
+       }, 4000);
+     }
+   });
+
+   // Comments functionality
+   const commentForm = document.getElementById('commentForm');
+   const nameInput = document.getElementById('nameInput');
+   const commentInput = document.getElementById('commentInput');
+   const commentError = document.getElementById('commentError');
+   const commentsContainer = document.getElementById('comments');
+   const clearCommentsBtn = document.getElementById('clearCommentsBtn');
+
+   function createCommentElement(name, comment) {
+     const wrapper = document.createElement('div');
+     wrapper.className = 'bg-white p-4 rounded-md shadow-sm border border-gray-200';
+
+     const header = document.createElement('div');
+     header.className = 'flex items-center justify-between mb-2';
+
+     const nameEl = document.createElement('h4');
+     nameEl.className = 'font-semibold text-indigo-700';
+     nameEl.textContent = name;
+
+     const dateEl = document.createElement('time');
+     dateEl.className = 'text-xs text-gray-400';
+     dateEl.dateTime = new Date().toISOString();
+     dateEl.textContent = new Date().toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' });
+
+     header.appendChild(nameEl);
+     header.appendChild(dateEl);
+
+     const commentEl = document.createElement('p');
+     commentEl.className = 'text-gray-700 whitespace-pre-wrap';
+     commentEl.textContent = comment;
+
+     wrapper.appendChild(header);
+     wrapper.appendChild(commentEl);
+
+     return wrapper;
+   }
+
+   // Load comments from localStorage
+   function loadComments() {
+     const savedComments = JSON.parse(localStorage.getItem('comments') || '[]');
+     commentsContainer.innerHTML = '';
+     if(savedComments.length === 0) {
+       commentsContainer.innerHTML = '<p class="text-center text-gray-400 italic">Nenhum comentário ainda. Seja o primeiro!</p>';
+       return;
+     }
+     savedComments.forEach(({name, comment, date}) => {
+       const wrapper = createCommentElement(name, comment);
+       const timeEl = wrapper.querySelector('time');
+       timeEl.dateTime = date;
+       timeEl.textContent = new Date(date).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' });
+       commentsContainer.appendChild(wrapper);
+     });
+   }
+
+   // Save comment to localStorage
+   function saveComment(name, comment) {
+     const savedComments = JSON.parse(localStorage.getItem('comments') || '[]');
+     savedComments.unshift({name, comment, date: new Date().toISOString()});
+     localStorage.setItem('comments', JSON.stringify(savedComments));
+   }
+
+   commentForm.addEventListener('submit', e => {
+     e.preventDefault();
+     const nameValue = nameInput.value.trim();
+     const commentValue = commentInput.value.trim();
+
+     if (!nameValue || !commentValue) {
+       commentError.classList.remove('hidden');
+       if (!nameValue) nameInput.focus();
+       else commentInput.focus();
+       return;
+     }
+     commentError.classList.add('hidden');
+
+     saveComment(nameValue, commentValue);
+     loadComments();
+
+     commentForm.reset();
+   });
+
+   clearCommentsBtn.addEventListener('click', () => {
+     if(confirm('Tem certeza que deseja limpar todos os comentários? Esta ação não pode ser desfeita.')) {
+       localStorage.removeItem('comments');
+       loadComments();
+     }
+   });
+
+   loadComments();
+
+   // Scroll to top button
+   const scrollTopBtn = document.getElementById('scrollTopBtn');
+   window.addEventListener('scroll', () => {
+     if(window.scrollY > 300) {
+       scrollTopBtn.classList.remove('hidden');
+     } else {
+       scrollTopBtn.classList.add('hidden');
+     }
+   });
+   scrollTopBtn.addEventListener('click', () => {
+     window.scrollTo({top: 0, behavior: 'smooth'});
+   });
+
+   // Bookmark functionality
+   const bookmarkToggle = document.getElementById('bookmarkToggle');
+   const bookmarkPanel = document.getElementById('bookmarkPanel');
+   const bookmarkClose = document.getElementById('bookmarkClose');
+   const bookmarksList = document.getElementById('bookmarksList');
+   const noBookmarks = document.getElementById('noBookmarks');
+   const contentSection = document.getElementById('contentSection');
+
+   // Load bookmarks from localStorage
+   function loadBookmarks() {
+     const bookmarks = JSON.parse(localStorage.getItem('bookmarks') || '[]');
+     bookmarksList.innerHTML = '';
+     if(bookmarks.length === 0) {
+       noBookmarks.classList.remove('hidden');
+       return;
+     }
+     noBookmarks.classList.add('hidden');
+     bookmarks.forEach(bm => {
+       const li = document.createElement('li');
+       li.className = 'py-2 flex justify-between items-center';
+
+       const btn = document.createElement('button');
+       btn.className = 'text-indigo-600 hover:text-indigo-800 font-medium text-left truncate max-w-[70%]';
+       btn.textContent = bm.text;
+       btn.title = bm.text;
+       btn.type = 'button';
+       btn.addEventListener('click', () => {
+         const el = contentSection.querySelector(`[data-paragraph-id="${bm.id}"]`);
+         if(el) {
+           el.scrollIntoView({behavior: 'smooth', block: 'center'});
+           el.classList.add('bg-indigo-100');
+           setTimeout(() => el.classList.remove('bg-indigo-100'), 2000);
+         }
+       });
+
+       const delBtn = document.createElement('button');
+       delBtn.className = 'text-red-500 hover:text-red-700 focus:outline-none';
+       delBtn.title = 'Remover marcador';
+       delBtn.type = 'button';
+       delBtn.innerHTML = '<i class="fas fa-trash-alt" aria-hidden="true"></i>';
+       delBtn.addEventListener('click', () => {
+         removeBookmark(bm.id);
+       });
+
+       li.appendChild(btn);
+       li.appendChild(delBtn);
+       bookmarksList.appendChild(li);
+     });
+   }
+
+   // Save bookmark
+   function saveBookmark(id, text) {
+     const bookmarks = JSON.parse(localStorage.getItem('bookmarks') || '[]');
+     if(bookmarks.find(bm => bm.id === id)) return; // avoid duplicates
+     bookmarks.push({id, text});
+     localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+     loadBookmarks();
+   }
+
+   // Remove bookmark
+   function removeBookmark(id) {
+     let bookmarks = JSON.parse(localStorage.getItem('bookmarks') || '[]');
+     bookmarks = bookmarks.filter(bm => bm.id !== id);
+     localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+     loadBookmarks();
+   }
+
+   // Toggle bookmark panel
+   bookmarkToggle.addEventListener('click', () => {
+     bookmarkPanel.classList.toggle('hidden');
+     if(!bookmarkPanel.classList.contains('hidden')) {
+       bookmarkPanel.focus();
+     }
+   });
+   bookmarkClose.addEventListener('click', () => {
+     bookmarkPanel.classList.add('hidden');
+     bookmarkToggle.focus();
+   });
+
+   // Add bookmark buttons to paragraphs on hover and focus
+   contentSection.querySelectorAll('p').forEach(p => {
+     const btn = document.createElement('button');
+     btn.type = 'button';
+     btn.title = 'Adicionar marcador';
+     btn.setAttribute('aria-label', 'Adicionar marcador para este parágrafo');
+     btn.className = 'ml-3 text-indigo-600 hover:text-indigo-800 focus:outline-none hidden';
+     btn.innerHTML = '<i class="fas fa-bookmark" aria-hidden="true"></i>';
+     btn.addEventListener('click', () => {
+       const id = p.getAttribute('data-paragraph-id');
+       const text = p.innerText.trim().slice(0, 60) + (p.innerText.length > 60 ? '...' : '');
+       saveBookmark(id, text);
+     });
+     p.appendChild(btn);
+     p.classList.add('relative');
+     p.addEventListener('mouseenter', () => btn.classList.remove('hidden'));
+     p.addEventListener('mouseleave', () => btn.classList.add('hidden'));
+     p.addEventListener('focusin', () => btn.classList.remove('hidden'));
+     p.addEventListener('focusout', () => btn.classList.add('hidden'));
+   });
+
+   loadBookmarks();
+
+   // Dark mode toggle
+   const darkModeToggle = document.createElement('button');
+   darkModeToggle.type = 'button';
+   darkModeToggle.id = 'darkModeToggle';
+   darkModeToggle.title = 'Alternar modo escuro';
+   darkModeToggle.setAttribute('aria-label', 'Alternar modo escuro');
+   darkModeToggle.className = 'fixed bottom-6 left-6 z-50 bg-gray-800 hover:bg-gray-900 text-white p-3 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-500';
+   darkModeToggle.innerHTML = '<i class="fas fa-moon" aria-hidden="true"></i>';
+   document.body.appendChild(darkModeToggle);
+
+   function enableDarkMode() {
+     document.documentElement.classList.add('dark');
+     document.body.classList.add('bg-gray-900', 'text-gray-200');
+     darkModeToggle.innerHTML = '<i class="fas fa-sun" aria-hidden="true"></i>';
+   }
+   function disableDarkMode() {
+     document.documentElement.classList.remove('dark');
+     document.body.classList.remove('bg-gray-900', 'text-gray-200');
+     darkModeToggle.innerHTML = '<i class="fas fa-moon" aria-hidden="true"></i>';
+   }
+
+   // Check localStorage for dark mode preference
+   if(localStorage.getItem('darkMode') === 'enabled') {
+     enableDarkMode();
+   }
+
+   darkModeToggle.addEventListener('click', () => {
+     if(document.documentElement.classList.contains('dark')) {
+       disableDarkMode();
+       localStorage.setItem('darkMode', 'disabled');
+     } else {
+       enableDarkMode();
+       localStorage.setItem('darkMode', 'enabled');
+     }
+   });
+
+   // Keyboard navigation for bookmarks panel (accessibility)
+   bookmarkToggle.addEventListener('keydown', e => {
+     if(e.key === 'Enter' || e.key === ' ') {
+       e.preventDefault();
+       bookmarkPanel.classList.toggle('hidden');
+       if(!bookmarkPanel.classList.contains('hidden')) {
+         bookmarksList.focus();
+       }
+     }
+   });
+
+   // Keyboard shortcut: Ctrl+B to toggle bookmarks panel
+   window.addEventListener('keydown', e => {
+     if(e.ctrlKey && e.key.toLowerCase() === 'b') {
+       e.preventDefault();
+       bookmarkPanel.classList.toggle('hidden');
+       if(!bookmarkPanel.classList.contains('hidden')) {
+         bookmarksList.focus();
+       }
+     }
+   });
+
+   // Keyboard shortcut: Ctrl+T to scroll to top
+   window.addEventListener('keydown', e => {
+     if(e.ctrlKey && e.key.toLowerCase() === 't') {
+       e.preventDefault();
+       window.scrollTo({top: 0, behavior: 'smooth'});
+     }
+   });
+
+   // Highlight searched text
+   const searchContainer = document.createElement('section');
+   searchContainer.className = 'max-w-3xl w-full mt-16 bg-white shadow-xl rounded-lg p-6 sm:p-10 border border-gray-200';
+   searchContainer.setAttribute('aria-label', 'Seção de busca no texto');
+   searchContainer.innerHTML = `
+    <h2 class="text-3xl font-extrabold text-gray-900 mb-6 text-center tracking-tight">Buscar no texto</h2>
+    <div class="flex max-w-xl mx-auto gap-4">
+      <input type="search" id="searchInput" aria-label="Buscar no texto" placeholder="Digite para buscar..." class="flex-grow border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" />
+      <button id="clearSearchBtn" aria-label="Limpar busca" class="bg-gray-300 hover:bg-gray-400 text-gray-700 font-semibold rounded-md px-6 py-3 transition">Limpar</button>
+    </div>
+   `;
+   document.body.insertBefore(searchContainer, document.querySelector('section.max-w-3xl.mt-16'));
+
+   const searchInput = document.getElementById('searchInput');
+   const clearSearchBtn = document.getElementById('clearSearchBtn');
+
+   function removeHighlights() {
+     const highlights = contentSection.querySelectorAll('mark.highlight');
+     highlights.forEach(mark => {
+       const parent = mark.parentNode;
+       parent.replaceChild(document.createTextNode(mark.textContent), mark);
+       parent.normalize();
+     });
+   }
+
+   function highlightText(text) {
+     if(!text) return;
+     const regex = new RegExp(text, 'gi');
+     contentSection.querySelectorAll('p > span').forEach(span => {
+       const originalText = span.textContent;
+       if(regex.test(originalText)) {
+         const newHTML = originalText.replace(regex, match => `<mark class="highlight">${match}</mark>`);
+         span.innerHTML = newHTML;
+       }
+     });
+   }
+
+   searchInput.addEventListener('input', () => {
+     removeHighlights();
+     const val = searchInput.value.trim();
+     if(val.length > 1) {
+       highlightText(val);
+     }
+   });
+
+   clearSearchBtn.addEventListener('click', () => {
+     searchInput.value = '';
+     removeHighlights();
+     searchInput.focus();
+   });
+
+   // Text resizing controls
+   const textResizeContainer = document.createElement('div');
+   textResizeContainer.className = 'fixed bottom-20 left-1/2 transform -translate-x-1/2 z-50 flex space-x-3 bg-white border border-gray-300 rounded-full shadow-lg p-2';
+   textResizeContainer.setAttribute('aria-label', 'Controles de tamanho de texto');
+   textResizeContainer.innerHTML = `
+    <button id="decreaseTextBtn" aria-label="Diminuir tamanho do texto" class="text-gray-600 hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded px-3 py-1 text-lg font-bold">A-</button>
+    <button id="resetTextBtn" aria-label="Resetar tamanho do texto" class="text-gray-600 hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded px-3 py-1 text-lg font-bold">A</button>
+    <button id="increaseTextBtn" aria-label="Aumentar tamanho do texto" class="text-gray-600 hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded px-3 py-1 text-lg font-bold">A+</button>
+   `;
+   document.body.appendChild(textResizeContainer);
+
+   const mainArticle = document.getElementById('mainArticle');
+   let currentFontSize = 18; // base font size in px
+
+   function updateFontSize() {
+     mainArticle.style.fontSize = currentFontSize + 'px';
+   }
+
+   document.getElementById('increaseTextBtn').addEventListener('click', () => {
+     if(currentFontSize < 28) {
+       currentFontSize += 2;
+       updateFontSize();
+     }
+   });
+   document.getElementById('decreaseTextBtn').addEventListener('click', () => {
+     if(currentFontSize > 14) {
+       currentFontSize -= 2;
+       updateFontSize();
+     }
+   });
+   document.getElementById('resetTextBtn').addEventListener('click', () => {
+     currentFontSize = 18;
+     updateFontSize();
+   });
+
+   updateFontSize();
+
+   // Reading progress bar
+   const progressBar = document.createElement('div');
+   progressBar.setAttribute('aria-hidden', 'true');
+   progressBar.className = 'fixed top-0 left-0 h-1 bg-indigo-600 w-0 z-50 transition-all duration-150 ease-out';
+   document.body.appendChild(progressBar);
+
+   window.addEventListener('scroll', () => {
+     const scrollTop = window.scrollY;
+     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+     const scrollPercent = (scrollTop / docHeight) * 100;
+     progressBar.style.width = scrollPercent + '%';
+   });
+
+   // Keyboard shortcut: Ctrl+F focuses search input
+   window.addEventListener('keydown', e => {
+     if(e.ctrlKey && e.key.toLowerCase() === 'f') {
+       e.preventDefault();
+       searchInput.focus();
+     }
+   });
+  </script>
+ </body>
+</html>
