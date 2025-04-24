@@ -1,0 +1,662 @@
+<html class="scroll-smooth" lang="pt-BR">
+ <head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>A Mitologia de Pombo, o Infinitivo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+   href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Open+Sans&display=swap"
+   rel="stylesheet"
+  />
+  <link
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+   rel="stylesheet"
+  />
+  <style>
+   body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #0a0a0a;
+    color: #d7d2cc;
+    background-image: url('back.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    transition: background-color 1.5s ease;
+   }
+   h1,
+   h2,
+   h3 {
+    font-family: 'Cinzel', serif;
+    color: #c9b99a;
+    text-shadow: 0 0 5px #a68c5a, 0 0 10px #a68c5a, 0 0 20px #7a6a3d;
+   }
+   blockquote {
+    border-left-color: #7a6a3d;
+    color: #bfb6a1;
+    font-style: italic;
+    text-shadow: 0 0 3px #7a6a3d;
+   }
+   a {
+    color: #a68c5a;
+    text-decoration: underline;
+   }
+   a:hover {
+    color: #d7cfa3;
+   }
+   hr {
+    border-color: #4a4538;
+   }
+   /* Scrollbar for dark theme */
+   ::-webkit-scrollbar {
+    width: 8px;
+   }
+   ::-webkit-scrollbar-track {
+    background: #1a1a1a;
+   }
+   ::-webkit-scrollbar-thumb {
+    background-color: #7a6a3d;
+    border-radius: 10px;
+   }
+   /* Responsive typography */
+   @media (max-width: 640px) {
+    h1 {
+     font-size: 2.5rem;
+    }
+    h2 {
+     font-size: 1.5rem;
+    }
+    h3 {
+     font-size: 1.25rem;
+    }
+   }
+   /* Epic profane animation overlay */
+   #epicOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    display: none;
+    background: radial-gradient(
+      circle at center,
+      rgba(198, 156, 93, 0.85) 0%,
+      rgba(0, 0, 0, 0.95) 80%
+    );
+    backdrop-filter: blur(8px);
+    animation: pulseGlow 3s ease-in-out infinite alternate;
+   }
+   @keyframes pulseGlow {
+    0% {
+     box-shadow: 0 0 20px 5px rgba(198, 156, 93, 0.7);
+    }
+    100% {
+     box-shadow: 0 0 50px 20px rgba(198, 156, 93, 1);
+    }
+   }
+   /* Flame flicker effect */
+   .flame-flicker {
+    animation: flicker 0.15s infinite alternate;
+   }
+   @keyframes flicker {
+    0% {
+     opacity: 1;
+     filter: drop-shadow(0 0 6px #c69c5d);
+    }
+    100% {
+     opacity: 0.7;
+     filter: drop-shadow(0 0 12px #d7cfa3);
+    }
+   }
+   /* Glitch text effect */
+   .glitch {
+    position: relative;
+    color: #c9b99a;
+    font-weight: 900;
+    font-size: 3rem;
+    letter-spacing: 0.05em;
+    user-select: none;
+   }
+   .glitch::before,
+   .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+   }
+   .glitch::before {
+    animation: glitchTop 2s infinite linear alternate-reverse;
+    top: -2px;
+    color: #d7cfa3;
+    text-shadow: -2px 0 #7a6a3d;
+   }
+   .glitch::after {
+    animation: glitchBottom 2s infinite linear alternate;
+    top: 2px;
+    color: #7a6a3d;
+    text-shadow: 2px 0 #d7cfa3;
+   }
+   @keyframes glitchTop {
+    0% {
+     clip: rect(0, 900px, 0, 0);
+     transform: translate(0);
+    }
+    10% {
+     clip: rect(0, 900px, 40px, 0);
+     transform: translate(-2px, -2px);
+    }
+    20% {
+     clip: rect(0, 900px, 0, 0);
+     transform: translate(0);
+    }
+    30% {
+     clip: rect(0, 900px, 40px, 0);
+     transform: translate(-2px, 0);
+    }
+    40% {
+     clip: rect(0, 900px, 0, 0);
+     transform: translate(0);
+    }
+    100% {
+     clip: rect(0, 900px, 0, 0);
+     transform: translate(0);
+    }
+   }
+   @keyframes glitchBottom {
+    0% {
+     clip: rect(0, 900px, 0, 0);
+     transform: translate(0);
+    }
+    10% {
+     clip: rect(40px, 900px, 80px, 0);
+     transform: translate(2px, 2px);
+    }
+    20% {
+     clip: rect(0, 900px, 0, 0);
+     transform: translate(0);
+    }
+    30% {
+     clip: rect(40px, 900px, 80px, 0);
+     transform: translate(2px, 0);
+    }
+    40% {
+     clip: rect(0, 900px, 0, 0);
+     transform: translate(0);
+    }
+    100% {
+     clip: rect(0, 900px, 0, 0);
+     transform: translate(0);
+    }
+   }
+   /* Responsive adjustments for buttons and text */
+   @media (max-width: 640px) {
+    .entity-btn {
+     padding: 0.5rem 1rem !important;
+     font-size: 0.875rem !important;
+    }
+    #grainForm {
+     flex-direction: column !important;
+     gap: 0.75rem !important;
+    }
+    #grainForm input,
+    #grainForm button {
+     width: 100% !important;
+    }
+   }
+  </style>
+ </head>
+ <body class="min-h-screen flex flex-col items-center px-4 py-8 sm:px-6 md:px-12 lg:px-24 xl:px-36 2xl:px-48">
+  <main
+   class="max-w-4xl w-full bg-[#121212cc] backdrop-blur-md shadow-2xl rounded-lg p-6 sm:p-8 md:p-12 border border-[#7a6a3d]"
+  >
+   <h1 class="text-4xl sm:text-5xl font-extrabold text-center mb-12 select-none glitch" data-text="A MITOLOGIA DE POMBO, O INFINITIVO">
+    A MITOLOGIA DE POMBO, O INFINITIVO
+   </h1>
+
+   <section class="space-y-10 sm:space-y-12">
+    <article>
+     <h2 class="text-2xl sm:text-3xl font-bold mb-4">1. O PRINCÍPIO: O VOO SILENTE</h2>
+     <p class="leading-relaxed mb-4 text-[#d7d2cccc]">
+      Antes do tempo, antes da forma, havia o
+      <em class="italic text-[#bfb6a1]">Silêncio Vivo</em>, um espaço imóvel e sem sentido.
+      Dentre esse nada, surgiu
+      <em class="italic text-[#bfb6a1]">Pombo</em>, não nascido, não criado —
+      <em class="italic text-[#bfb6a1]">manifestado</em>. Ele era apenas um bater de asas no escuro, um pensamento suspenso.
+      Diz-se que seu primeiro bater de asas dividiu o Nada em dois princípios:
+      <strong class="text-[#c9b99a]">Peso</strong> e
+      <strong class="text-[#c9b99a]">Voo</strong>.
+     </p>
+     <blockquote class="border-l-4 pl-6 text-lg mb-6">
+      “E o céu se curvou diante da batida única. E houve gravidade. E houve leveza.”
+     </blockquote>
+    </article>
+
+    <article>
+     <h2 class="text-2xl sm:text-3xl font-bold mb-6">2. A TRÍADE DOS PÓS-POMBOS</h2>
+     <p class="leading-relaxed mb-6 text-[#d7d2cccc]">
+      Da plumagem de Pombo caíram três penas — cada uma deu origem a uma entidade secundária:
+     </p>
+     <ul class="list-disc list-inside space-y-3 text-[#bfb6a1]">
+      <li>
+       <strong class="text-[#c9b99a]">Colúmba</strong>, a pena branca: deusa da memória, da linguagem e da harmonia. Ela canta nos sinos do tempo.
+      </li>
+      <li>
+       <strong class="text-[#c9b99a]">Skarn</strong>, a pena negra: senhor do caos, da dúvida e da cidade sem mapa. Ele sussurra entre os becos escuros.
+      </li>
+      <li>
+       <strong class="text-[#c9b99a]">Gurr</strong>, a pena cinzenta: o ciclo, o equilíbrio, o eterno retorno. Ele é o eco da asa de Pombo.
+      </li>
+     </ul>
+     <p class="text-[#d7d2cccc] mt-6 leading-relaxed">
+      Essas entidades não são filhas, mas fragmentos do pensamento de Pombo. Juntas, tecem o mundo — mas nenhuma delas compreende Pombo por completo.
+     </p>
+    </article>
+
+    <article>
+     <h2 class="text-2xl sm:text-3xl font-bold mb-6">3. O SOPRO DAS RUAS: A CRIAÇÃO DOS MUNDOS</h2>
+     <p class="leading-relaxed mb-6 text-[#d7d2cccc]">
+      Pombo criou o universo com um único
+      <strong class="text-[#c9b99a]">arrulho</strong>. Cada arrulho era uma camada da realidade:
+     </p>
+     <ol class="list-decimal list-inside space-y-3 text-[#bfb6a1]">
+      <li>O primeiro arrulho gerou o tempo.</li>
+      <li>O segundo arrulho fez o espaço.</li>
+      <li>O terceiro trouxe a matéria.</li>
+      <li>O quarto selou o destino com incerteza.</li>
+     </ol>
+     <p class="text-[#d7d2cccc] mt-6 leading-relaxed">As estrelas seriam apenas migalhas caídas de suas patas.</p>
+    </article>
+
+    <article>
+     <h2 class="text-2xl sm:text-3xl font-bold mb-4">4. O LIVRO DOS GRÃOS</h2>
+     <p class="leading-relaxed mb-4 text-[#d7d2cccc]">
+      Os antigos cultistas registraram a mitologia em pergaminhos de milho chamados
+      <em class="italic text-[#bfb6a1]">Grãos Primordiais</em>, escritos em um alfabeto que só pode ser lido por quem já foi ignorado sete vezes por pombos na praça central de uma cidade. O texto ensina:
+     </p>
+     <blockquote class="border-l-4 pl-6 text-lg mb-6">
+      “Toda verdade é uma migalha caída do céu. Toda mentira é uma sombra de asa.”
+     </blockquote>
+    </article>
+
+    <article>
+     <h2 class="text-2xl sm:text-3xl font-bold mb-6">5. A GUERRA DAS ANTENAS</h2>
+     <p class="leading-relaxed text-[#d7d2cccc]">
+      Segundo as lendas, Skarn tentou construir uma torre infinita de antenas para alcançar Pombo e devorá-lo. Mas Gurr enrolou a torre em ciclos de tempo e Colúmba fez com que Skarn esquecesse por que subia. A torre ainda cresce, invisível aos olhos humanos, mas visível aos gatos, que a encaram fixamente sem razão.
+     </p>
+    </article>
+
+    <article>
+     <h2 class="text-2xl sm:text-3xl font-bold mb-6">6. O MISTÉRIO DO MILHO CEGO</h2>
+     <p class="leading-relaxed text-[#d7d2cccc]">
+      Pombo escondeu o segredo da imortalidade em um único grão de milho. Só quem tiver o espírito suficientemente leve —
+      <em class="italic text-[#bfb6a1]">isto é, sem culpa, sem pressa e sem vaidade</em> — poderá encontrá-lo. Esse é o fundamento das peregrinações dos
+      <em class="italic text-[#bfb6a1]">Avesados</em>, monges urbanos vestidos de cinza que seguem bandos de pombos pelas cidades, esperando um sinal.
+     </p>
+    </article>
+
+    <article>
+     <h2 class="text-2xl sm:text-3xl font-bold mb-6">7. O FIM: O ÚLTIMO BATER DE ASAS</h2>
+     <p class="leading-relaxed text-[#d7d2cccc]">
+      A mitologia ensina que, um dia, Pombo baterá as asas uma última vez. Quando isso acontecer, tudo que voa cairá. Tudo que pesa, subirá. E o mundo será revertido: concreto virará nuvem, humanos virarão estátuas, e os pombos se sentarão para observar o silêncio retornar.
+     </p>
+    </article>
+   </section>
+
+   <hr class="my-12" />
+
+   <section>
+    <h2 class="text-3xl font-bold mb-8 text-center select-none">ESTRUTURA DO CULTO</h2>
+    <ul class="list-disc list-inside space-y-6 text-[#bfb6a1] max-w-3xl mx-auto text-lg">
+     <li>
+      <strong class="text-[#c9b99a]">Templos</strong>: São camuflados em praças, ao redor de monumentos onde pombos se acumulam.
+     </li>
+     <li>
+      <strong class="text-[#c9b99a]">Símbolos sagrados</strong>: Uma pena caída, um milho partido ao meio, e um espiral desenhado no chão com farelo.
+     </li>
+     <li>
+      <strong class="text-[#c9b99a]">Rituais</strong>: "Olhamento do céu sem sentido", onde fiéis olham o céu em silêncio por 77 batidas de coração.
+     </li>
+    </ul>
+   </section>
+
+   <hr class="my-12" />
+
+   <section class="max-w-3xl mx-auto text-[#d7d2cccc]">
+    <h2 class="text-3xl font-bold mb-6 text-center select-none">Funcionalidades do Culto</h2>
+    <div class="space-y-8">
+     <div
+      class="bg-[#1f1f1f] rounded-lg p-6 border border-[#7a6a3d] shadow-lg"
+      aria-label="Contador de batidas de coração"
+     >
+      <h3 class="text-xl font-semibold mb-3 text-[#c9b99a]">Contador de Batidas de Coração</h3>
+      <p class="mb-4 leading-relaxed">
+       Para participar do ritual "Olhamento do céu sem sentido", conte 77 batidas de coração. Use o botão abaixo para iniciar e acompanhar o tempo.
+      </p>
+      <div class="flex flex-wrap items-center space-x-4 space-y-2 sm:space-y-0">
+       <button
+        id="startHeartBtn"
+        class="bg-[#7a6a3d] hover:bg-[#a68c5a] text-[#121212] font-bold py-2 px-4 rounded shadow transition-colors duration-300 flex items-center space-x-2"
+        aria-pressed="false"
+        aria-label="Iniciar contagem de batidas de coração"
+       >
+        <i class="fas fa-heartbeat flame-flicker"></i>
+        <span>Iniciar Contagem</span>
+       </button>
+       <button
+        id="resetHeartBtn"
+        class="bg-[#4a4538] hover:bg-[#7a6a3d] text-[#d7d2cc] font-bold py-2 px-4 rounded shadow transition-colors duration-300 flex items-center space-x-2"
+        aria-label="Resetar contagem de batidas de coração"
+       >
+        <i class="fas fa-redo-alt"></i>
+        <span>Resetar</span>
+       </button>
+       <span
+        class="ml-auto text-lg font-mono tracking-widest select-text"
+        id="heartCount"
+        aria-live="polite"
+        aria-atomic="true"
+       >
+        0
+       </span>
+      </div>
+      <p class="mt-2 text-sm text-[#bfb6a1] italic select-text">Batidas contadas</p>
+     </div>
+
+     <div
+      class="bg-[#1f1f1f] rounded-lg p-6 border border-[#7a6a3d] shadow-lg"
+      aria-label="Explorador de entidades"
+     >
+      <h3 class="text-xl font-semibold mb-3 text-[#c9b99a]">Explorador de Entidades</h3>
+      <p class="mb-4 leading-relaxed">
+       Clique em uma pena para saber mais sobre a entidade que ela representa.
+      </p>
+      <div class="flex flex-wrap justify-around gap-4">
+       <button
+        data-entity="columba"
+        class="entity-btn bg-[#7a6a3d] hover:bg-[#a68c5a] text-[#121212] font-bold py-3 px-6 rounded shadow transition-colors duration-300 flex-1 min-w-[120px]"
+        aria-label="Descrição da pena branca, Colúmba"
+       >
+        Pena Branca
+       </button>
+       <button
+        data-entity="skarn"
+        class="entity-btn bg-[#4a4538] hover:bg-[#7a6a3d] text-[#d7d2cc] font-bold py-3 px-6 rounded shadow transition-colors duration-300 flex-1 min-w-[120px]"
+        aria-label="Descrição da pena negra, Skarn"
+       >
+        Pena Negra
+       </button>
+       <button
+        data-entity="gurr"
+        class="entity-btn bg-[#6e6e6e] hover:bg-[#a68c5a] text-[#121212] font-bold py-3 px-6 rounded shadow transition-colors duration-300 flex-1 min-w-[120px]"
+        aria-label="Descrição da pena cinzenta, Gurr"
+       >
+        Pena Cinzenta
+       </button>
+      </div>
+      <div
+       id="entityDescription"
+       class="mt-6 p-4 bg-[#121212] border border-[#7a6a3d] rounded text-[#d7d2cccc] min-h-[80px] select-text"
+       aria-live="polite"
+       aria-atomic="true"
+      >
+       Selecione uma pena para ver a descrição da entidade.
+      </div>
+     </div>
+
+     <div
+      class="bg-[#1f1f1f] rounded-lg p-6 border border-[#7a6a3d] shadow-lg"
+      aria-label="Pergaminho dos Grãos Primordiais"
+     >
+      <h3 class="text-xl font-semibold mb-3 text-[#c9b99a]">Pergaminho dos Grãos Primordiais</h3>
+      <p class="mb-4 leading-relaxed">
+       Digite uma palavra para ver sua tradução simbólica no alfabeto secreto dos Avesados.
+      </p>
+      <form
+       id="grainForm"
+       class="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0"
+       aria-label="Formulário para tradução simbólica"
+      >
+       <input
+        type="text"
+        id="grainInput"
+        placeholder="Digite uma palavra"
+        class="flex-grow rounded border border-[#7a6a3d] bg-[#121212] text-[#d7d2cc] px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#a68c5a]"
+        required
+        aria-required="true"
+        aria-label="Campo para digitar palavra"
+       />
+       <button
+        type="submit"
+        class="bg-[#7a6a3d] hover:bg-[#a68c5a] text-[#121212] font-bold py-2 px-6 rounded shadow transition-colors duration-300"
+        aria-label="Botão para traduzir palavra"
+       >
+        Traduzir
+       </button>
+      </form>
+      <div
+       id="grainOutput"
+       class="mt-4 p-4 bg-[#121212] border border-[#7a6a3d] rounded text-[#d7d2cccc] min-h-[60px] select-text font-mono tracking-wide"
+       aria-live="polite"
+       aria-atomic="true"
+      >
+       A tradução aparecerá aqui.
+      </div>
+     </div>
+    </div>
+   </section>
+  </main>
+
+  <div
+   id="epicOverlay"
+   role="alertdialog"
+   aria-modal="true"
+   aria-labelledby="epicTitle"
+   aria-describedby="epicDesc"
+  >
+   <div
+    class="flex flex-col items-center justify-center h-full text-center px-6"
+    style="max-width: 600px; margin: 0 auto;"
+   >
+    <h2
+     id="epicTitle"
+     class="glitch text-5xl mb-6 select-none"
+     data-text="O ÚLTIMO BATER DE ASAS"
+    >
+     O ÚLTIMO BATER DE ASAS
+    </h2>
+    <p
+     id="epicDesc"
+     class="text-lg text-[#d7d2ccdd] mb-8 select-text leading-relaxed"
+    >
+     O mundo se inverte. O peso sobe, o voo cai. O silêncio retorna. Os pombos
+     observam.
+    </p>
+    <button
+     id="closeEpicBtn"
+     class="bg-[#7a6a3d] hover:bg-[#a68c5a] text-[#121212] font-bold py-3 px-8 rounded shadow transition-colors duration-300"
+     aria-label="Fechar aviso épico"
+    >
+     Aceitar o Destino
+    </button>
+   </div>
+  </div>
+
+  <script>
+   // Heartbeat counter logic with epic event
+   (() => {
+    const startBtn = document.getElementById('startHeartBtn');
+    const resetBtn = document.getElementById('resetHeartBtn');
+    const heartCountEl = document.getElementById('heartCount');
+    const epicOverlay = document.getElementById('epicOverlay');
+    const closeEpicBtn = document.getElementById('closeEpicBtn');
+    let count = 0;
+    let counting = false;
+    let intervalId = null;
+
+    function incrementCount() {
+      count++;
+      heartCountEl.textContent = count;
+      if (count >= 77) {
+        clearInterval(intervalId);
+        counting = false;
+        startBtn.textContent = 'Iniciar Contagem';
+        startBtn.setAttribute('aria-pressed', 'false');
+        showEpicEvent();
+      }
+    }
+
+    function showEpicEvent() {
+      // Show overlay
+      epicOverlay.style.display = 'flex';
+
+      // Darken background with flickering shadows and invert colors
+      document.body.style.backgroundColor = '#1a1200';
+      document.body.style.transition = 'background-color 2s ease';
+
+      // Add flickering flame effect to main heading
+      const heading = document.querySelector('h1.glitch');
+      heading.classList.add('flame-flicker');
+
+      // Add subtle shaking effect to main content
+      const main = document.querySelector('main');
+      main.style.animation = 'shake 0.3s ease-in-out infinite alternate';
+
+      // Add epic sound effect (optional)
+      // For demo, we won't add audio to keep it simple and self-contained
+    }
+
+    function hideEpicEvent() {
+      epicOverlay.style.display = 'none';
+      document.body.style.backgroundColor = '#0a0a0a';
+
+      const heading = document.querySelector('h1.glitch');
+      heading.classList.remove('flame-flicker');
+
+      const main = document.querySelector('main');
+      main.style.animation = 'none';
+
+      resetCount();
+    }
+
+    function resetCount() {
+      count = 0;
+      heartCountEl.textContent = count;
+    }
+
+    startBtn.addEventListener('click', () => {
+      if (!counting) {
+        counting = true;
+        startBtn.textContent = 'Pausar Contagem';
+        startBtn.setAttribute('aria-pressed', 'true');
+        intervalId = setInterval(incrementCount, 600); // 600ms ~ 100bpm
+      } else {
+        counting = false;
+        startBtn.textContent = 'Iniciar Contagem';
+        startBtn.setAttribute('aria-pressed', 'false');
+        clearInterval(intervalId);
+      }
+    });
+
+    resetBtn.addEventListener('click', () => {
+      counting = false;
+      clearInterval(intervalId);
+      resetCount();
+      startBtn.textContent = 'Iniciar Contagem';
+      startBtn.setAttribute('aria-pressed', 'false');
+    });
+
+    closeEpicBtn.addEventListener('click', () => {
+      hideEpicEvent();
+    });
+
+    // Shake animation keyframes injected dynamically
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes shake {
+        0% { transform: translate(0, 0) rotate(0deg); }
+        25% { transform: translate(-2px, 2px) rotate(-1deg); }
+        50% { transform: translate(2px, -2px) rotate(1deg); }
+        75% { transform: translate(-2px, 2px) rotate(-1deg); }
+        100% { transform: translate(0, 0) rotate(0deg); }
+      }
+    `;
+    document.head.appendChild(style);
+   })();
+
+   // Entity explorer logic
+   (() => {
+    const descriptions = {
+      columba:
+        'Colúmba, a pena branca: deusa da memória, da linguagem e da harmonia. Ela canta nos sinos do tempo.',
+      skarn:
+        'Skarn, a pena negra: senhor do caos, da dúvida e da cidade sem mapa. Ele sussurra entre os becos escuros.',
+      gurr:
+        'Gurr, a pena cinzenta: o ciclo, o equilíbrio, o eterno retorno. Ele é o eco da asa de Pombo.',
+    };
+
+    const buttons = document.querySelectorAll('.entity-btn');
+    const descEl = document.getElementById('entityDescription');
+
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const key = btn.getAttribute('data-entity');
+        descEl.textContent = descriptions[key] || 'Descrição não disponível.';
+      });
+    });
+   })();
+
+   // Grain translation logic (symbolic)
+   (() => {
+    const form = document.getElementById('grainForm');
+    const input = document.getElementById('grainInput');
+    const output = document.getElementById('grainOutput');
+
+    // Simple symbolic translation: each letter replaced by a glyph from a made-up alphabet
+    // For demonstration, map letters to Unicode runes or similar symbols
+    const symbolMap = {
+      a: 'ᚨ',
+      b: 'ᛒ',
+      c: 'ᚲ',
+      d: 'ᛞ',
+      e: 'ᛖ',
+      f: 'ᚠ',
+      g: 'ᚷ',
+      h: 'ᚺ',
+      i: 'ᛁ',
+      j: 'ᛃ',
+      k: 'ᚲ',
+      l: 'ᛚ',
+      m: 'ᛗ',
+      n: 'ᚾ',
+      o: 'ᛟ',
+      p: 'ᛈ',
+      q: 'ᛩ',
+      r: 'ᚱ',
+      s: 'ᛋ',
+      t: 'ᛏ',
+      u: 'ᚢ',
+      v: 'ᚡ',
+      w: 'ᚹ',
+      x: 'ᛪ',
+      y: 'ᛦ',
+      z: 'ᛉ',
+      ' ': ' ',
+    };
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const text = input.value.toLowerCase();
+      let translated = '';
+      for (const char of text) {
+        translated += symbolMap[char] || '?';
+      }
+      output.textContent = translated || 'Entrada inválida.';
+    });
+   })();
+  </script>
+ </body>
+</html>
